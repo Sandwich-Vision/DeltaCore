@@ -17,7 +17,10 @@ Pod::Spec.new do |spec|
     "DeltaCore" => ["DeltaCore/**/*.deltamapping"]
   }
   
-  spec.dependency "ZIPFoundation"
+  spec.dependency "ZIPFoundation", '~> 0.9.19'
+
+  spec.ios.deployment_target  = '14.0'
+  spec.visionos.deployment_target  = '1.0'
   
   spec.xcconfig = {
     "SWIFT_ACTIVE_COMPILATION_CONDITIONS" => "STATIC_LIBRARY",
